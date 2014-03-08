@@ -21,6 +21,9 @@
 		187E6EDB18C410AD007B4BAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E6EBD18C410AD007B4BAC /* UIKit.framework */; };
 		187E6EE318C410AD007B4BAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 187E6EE118C410AD007B4BAC /* InfoPlist.strings */; };
 		187E6EE518C410AD007B4BAC /* _1___Socket___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6EE418C410AD007B4BAC /* _1___Socket___Tests.m */; };
+		187E6EF118C410DD007B4BAC /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E6EF018C410DD007B4BAC /* GCDAsyncSocket.m */; };
+		187E6EF318C410E9007B4BAC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E6EF218C410E9007B4BAC /* CFNetwork.framework */; };
+		187E6EF518C410EF007B4BAC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187E6EF418C410EF007B4BAC /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		187E6EE018C410AD007B4BAC /* 01-异步Socket聊天室Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "01-异步Socket聊天室Tests-Info.plist"; sourceTree = "<group>"; };
 		187E6EE218C410AD007B4BAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		187E6EE418C410AD007B4BAC /* _1___Socket___Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_1___Socket___Tests.m"; sourceTree = "<group>"; };
+		187E6EEF18C410DD007B4BAC /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		187E6EF018C410DD007B4BAC /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		187E6EF218C410E9007B4BAC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		187E6EF418C410EF007B4BAC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E6EF518C410EF007B4BAC /* Security.framework in Frameworks */,
+				187E6EF318C410E9007B4BAC /* CFNetwork.framework in Frameworks */,
 				187E6EBC18C410AD007B4BAC /* CoreGraphics.framework in Frameworks */,
 				187E6EBE18C410AD007B4BAC /* UIKit.framework in Frameworks */,
 				187E6EBA18C410AD007B4BAC /* Foundation.framework in Frameworks */,
@@ -101,6 +110,8 @@
 		187E6EB818C410AD007B4BAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				187E6EF418C410EF007B4BAC /* Security.framework */,
+				187E6EF218C410E9007B4BAC /* CFNetwork.framework */,
 				187E6EB918C410AD007B4BAC /* Foundation.framework */,
 				187E6EBB18C410AD007B4BAC /* CoreGraphics.framework */,
 				187E6EBD18C410AD007B4BAC /* UIKit.framework */,
@@ -112,6 +123,7 @@
 		187E6EBF18C410AD007B4BAC /* 01-异步Socket聊天室 */ = {
 			isa = PBXGroup;
 			children = (
+				187E6EEE18C410DD007B4BAC /* CocoaAsyncSocket */,
 				187E6EC818C410AD007B4BAC /* AppDelegate.h */,
 				187E6EC918C410AD007B4BAC /* AppDelegate.m */,
 				187E6ECB18C410AD007B4BAC /* Main.storyboard */,
@@ -150,6 +162,15 @@
 				187E6EE118C410AD007B4BAC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187E6EEE18C410DD007B4BAC /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				187E6EEF18C410DD007B4BAC /* GCDAsyncSocket.h */,
+				187E6EF018C410DD007B4BAC /* GCDAsyncSocket.m */,
+			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187E6EF118C410DD007B4BAC /* GCDAsyncSocket.m in Sources */,
 				187E6ED018C410AD007B4BAC /* ViewController.m in Sources */,
 				187E6ECA18C410AD007B4BAC /* AppDelegate.m in Sources */,
 				187E6EC618C410AD007B4BAC /* main.m in Sources */,

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ViewContollerDelegate <NSObject>
+
+- (void)test;
+
+@end
+
 @interface ViewController : UIViewController
+
+@property (nonatomic, weak) id<ViewContollerDelegate> delegate;
 
 @end
